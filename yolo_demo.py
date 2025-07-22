@@ -111,7 +111,7 @@ def main():
     detector = YOLODetector()
     
     # Find image files
-    image_extensions = ['.jpg', '.jpeg', '.png', '.bmp']
+    image_extensions = ['.jpg', '.jpeg']
     image_files = []
     
     # Check current directory

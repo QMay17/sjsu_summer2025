@@ -13,7 +13,7 @@ def batch_detect():
     
     # Find all images
     image_files = []
-    for ext in ['.jpg', '.jpeg', '.png', '.bmp']:
+    for ext in ['.jpg', '.jpeg']:
         image_files.extend([f for f in os.listdir('.') if f.lower().endswith(ext)])
     
     if not image_files:

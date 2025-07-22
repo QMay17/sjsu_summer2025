@@ -61,7 +61,7 @@ def simple_detect(image_path):
 if __name__ == "__main__":
     # Find first image file
     image_files = [f for f in os.listdir('.') 
-                   if f.lower().endswith(('.jpg', '.jpeg', '.png'))]
+                   if f.lower().endswith(('.jpg', '.jpeg'))]
     
     if image_files:
         simple_detect(image_files[0])
