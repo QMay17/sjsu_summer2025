@@ -53,22 +53,10 @@ Total cars found: 3
 
 ```
 sjsu_summer2025/
-├── car_detector.py     # This single file
-├── requirements.txt    # Same as before
-├── README.md          # Update this
-└── images/            # Create this folder
-    ├── cars1.jpg      # Add your car images here
-    ├── cars2.jpg     
-    ├── cars3.jpg 
-    ├── cars4.jpg 
-    ├── cars5.jpg  
-    ├── street_cars.jpg
-    ├── cars_detected_cars1.jpg      # Results with bounding boxes
-    ├── cars_detected_cars2.jpg     
-    ├── cars_detected_cars3.jpg    
-    ├── cars_detected_cars4.jpg    
-    ├── cars_detected_cars5.jpg     
-    └── cars_detected_street_cars.jpg
+├── car_detector.py           # Main detection script
+├── requirements.txt          # Dependencies
+├── README.md                 # Instructions
+├── images/                   # Input images folder
 ```
 
 ## Troubleshooting

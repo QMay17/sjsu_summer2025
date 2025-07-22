@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Simple Car Detection Script for Jetson Nano
-Detects cars, trucks, and buses in all images from the 'images' folder
+Detects cars, trucks, and buses in all images from the 'car_images' folder
 """
 
 import cv2
