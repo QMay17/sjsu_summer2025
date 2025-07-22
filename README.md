@@ -4,31 +4,19 @@
 
 ### Step 1: Clone Repository First
 ```bash
-mkdir ~/yolo_demo && cd ~/yolo_demo
+mkdir ~/yolo_demo 
+cd ~/yolo_demo
 git clone https://github.com/QMay17/sjsu_summer2025.git
 cd sjsu_summer2025
 ```
 
-### Step 2: Download Sample Images Into Repository Folder
+### Step 2: Install and run
 ```bash
-# Download sample images with cars (into the same folder as the Python scripts)
-wget https://tinyurl.com/2k5rc87t -O cars1.jpg
-wget https://tinyurl.com/n2krc25y -O cars2.jpg
-wget https://tinyurl.com/4cfx7me8 -O street_cars.jpg
-```
+pip3 install ultralytics
 
-### Step 3: Install Requirements and Run
-```bash
-pip3 install -r requirements.txt
+# Simple detection 
+python3 car_detector.py
 
-# Simple detection (processes first image found)
-python3 simple_yolo.py
-
-# Full detection (processes all images)
-python3 yolo_demo.py
-
-# Batch processing (fastest for multiple images)
-python3 batch_detect.py
 ```
 
 ## What This Demo Does
@@ -36,15 +24,9 @@ python3 batch_detect.py
 ✅ **Loads YOLOv8** (state-of-the-art object detection)  
 ✅ **Detects cars, trucks, and buses only** (focused detection)  
 ✅ **Shows confidence scores** for each car detected  
-✅ **Draws green bounding boxes** around detected vehicles  
+✅ **Draws bounding boxes** around detected vehicles  
 ✅ **Saves results** as new image files with car detection  
 ✅ **Counts total cars** found in each image
-
-## Available Scripts
-
-- **`simple_yolo.py`** - Detect cars in one image (beginner-friendly)
-- **`yolo_demo.py`** - Detect cars in all images with detailed output
-- **`batch_detect.py`** - Fast batch car detection for multiple images
 
 ## Vehicle Types Detected
 
@@ -54,7 +36,7 @@ python3 batch_detect.py
 
 Perfect for traffic monitoring, parking lot analysis, or autonomous vehicle projects!
 
-## Expected Output
+## Example Output
 
 When you run the detection, you'll see:
 ```
@@ -70,18 +52,22 @@ Total cars found: 3
 ## File Structure After Running
 
 ```
-~/yolo_demo/
-└── sjsu_summer2025/             # Your repository folder
-    ├── simple_yolo.py           # Python scripts
-    ├── yolo_demo.py
-    ├── batch_detect.py
-    ├── requirements.txt
-    ├── README.md
-    ├── cars1.jpg                # Downloaded images
-    ├── cars2.jpg                
-    ├── street_cars.jpg          
+sjsu_summer2025/
+├── car_detector.py     # This single file
+├── requirements.txt    # Same as before
+├── README.md          # Update this
+└── images/            # Create this folder
+    ├── cars1.jpg      # Add your car images here
+    ├── cars2.jpg     
+    ├── cars3.jpg 
+    ├── cars4.jpg 
+    ├── cars5.jpg  
+    ├── street_cars.jpg
     ├── cars_detected_cars1.jpg      # Results with bounding boxes
-    ├── cars_detected_cars2.jpg      
+    ├── cars_detected_cars2.jpg     
+    ├── cars_detected_cars3.jpg    
+    ├── cars_detected_cars4.jpg    
+    ├── cars_detected_cars5.jpg     
     └── cars_detected_street_cars.jpg
 ```
 
