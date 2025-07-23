@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Simple Car Detection Script for Jetson Nano
-Detects cars, trucks, and buses in all images from the 'car_images' folder
+Detects cars, trucks, and buses in all images from the 'images' folder
 """
 
 import cv2
@@ -21,7 +21,7 @@ def detect_vehicles():
         return
     
     # Find all image files in the images folder
-    image_extensions = ['.jpg', '.jpeg']
+    image_extensions = ['.jpg', '.jpeg', '.png', '.bmp']
     image_files = []
     
     for file in os.listdir('images'):
@@ -30,7 +30,7 @@ def detect_vehicles():
     
     if not image_files:
         print("❌ No image files found in the 'images' folder!")
-        print("   Please add some .jpg files to the 'images' folder")
+        print("   Please add some .jpg or .png files to the 'images' folder")
         return
     
     print(f"📁 Found {len(image_files)} image(s) in 'images' folder")
